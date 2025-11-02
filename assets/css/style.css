@@ -12,10 +12,10 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Sen", sans-serif;
+  font-family: "Sora", sans-serif;
 }
 
-/* ---------------------common------------- */
+/* ============== common ================= */
 .container {
   width: 1170px;
   max-width: calc(100% - 48px);
@@ -25,12 +25,13 @@ body {
 a {
   text-decoration: none;
 }
+
 .btn {
   display: inline-block;
   min-width: 205px;
+  line-height: 60px;
   background: #2e80ce;
   color: #fff;
-  line-height: 60px;
   text-align: center;
   font-size: 1.8rem;
   font-style: normal;
@@ -42,9 +43,9 @@ a {
   opacity: 0.9;
 }
 
-/* -------------------header--------------- */
+/* ================ header ================ */
 .header {
-  margin-top: 30px;
+  padding-top: 30px;
   background: var(--header-bg);
   min-height: 100vh;
 }
@@ -55,12 +56,12 @@ a {
   align-items: center;
 }
 
-.navbar_list {
+.navbar__list {
   display: flex;
 }
 
-.header .header_action-login,
-.navbar_link {
+.header__action--login,
+.navbar__link {
   padding: 8px 21px;
   color: #c9d2da;
   font-size: 1.6rem;
@@ -69,13 +70,13 @@ a {
   line-height: 1.75;
 }
 
-.navbar_link:hover,
-.navbar_link-active {
+.navbar__link:hover,
+.navbar__link--active {
   text-shadow: 1px 0 0 currentColor;
   color: #fff;
 }
 
-.navbar_link-active::before {
+.navbar__link--active::before {
   content: "";
   display: inline-block;
   width: 6px;
@@ -87,12 +88,83 @@ a {
   right: 8px;
 }
 
-.header_action-signup {
-  min-width: 104px;
-  font-size: 1.6rem;
+.header__action--signup {
+  min-width: 144px;
   line-height: 44px;
+  font-size: 1.6rem;
 }
 
-.header_action-login {
+.header__action--login {
   margin-right: 7px;
+}
+
+/* =================== hero ========================== */
+.hero {
+  display: flex;
+  padding-top: 76px;
+  align-items: center;
+}
+
+.hero__content {
+  width: 44%;
+}
+
+.hero__media {
+  flex: 1;
+}
+
+.hero__heading {
+  color: #fff;
+  font-size: 7rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.14;
+  letter-spacing: -1.4px; /*khoảng cách chữ*/
+}
+
+.hero__desc {
+  margin-top: 22px;
+  color: #c9d2da;
+  font-family: Sora;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.67;
+}
+
+.hero__row {
+  margin-top: 38px;
+  display: flex;
+  align-items: center;
+  column-gap: 38px; /*khoảng cách cột*/
+}
+
+.hero__phone {
+  color: #fff;
+  text-align: center;
+  font-size: 1.8rem;
+  line-height: 1.67;
+}
+
+.hero__images {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.hero__img {
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.hero__img-large {
+  width: 330px;
+  height: 540px;
+  margin-right: -6px;
+  z-index: 1;
+}
+
+.hero__img-small {
+  width: 210px;
+  height: 410px;
 }
